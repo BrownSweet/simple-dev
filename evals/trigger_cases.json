@@ -1,0 +1,73 @@
+{
+  "recommended_threshold": 0.48,
+  "should_trigger": [
+    {
+      "text": "Fix this bug with the smallest change and keep the implementation straightforward.",
+      "family": "generic_plus_explicit"
+    },
+    {
+      "text": "Keep this implementation minimal and straightforward, with as few abstractions and files as practical.",
+      "family": "implementation"
+    },
+    {
+      "text": "Plan the smallest change that satisfies this requirement; do not design future architecture.",
+      "family": "planning"
+    },
+    {
+      "text": "Refactor this service into fewer layers while preserving behavior.",
+      "family": "refactoring"
+    },
+    {
+      "text": "Review this diff for unnecessary abstraction and N+1 queries.",
+      "family": "review"
+    },
+    {
+      "text": "请用最小改动修复这个问题，保持实现简单。",
+      "family": "cn_implementation"
+    },
+    {
+      "text": "检查这段查询有没有 N+1，不要引入多余层级。",
+      "family": "cn_database"
+    },
+    {
+      "text": "Let the architecture workflow lead this architecture redesign, but keep the proposal minimal with fewer layers.",
+      "family": "specialist_combination"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "text": "Implement this feature.",
+      "family": "generic_development"
+    },
+    {
+      "text": "Fix this bug.",
+      "family": "generic_development"
+    },
+    {
+      "text": "Explain this code to me.",
+      "family": "explain_only"
+    },
+    {
+      "text": "只运行测试，不要修改代码。",
+      "family": "test_only"
+    }
+  ],
+  "near_neighbor": [
+    {
+      "text": "Use strict TDD and follow the full red green refactor loop.",
+      "family": "tdd"
+    },
+    {
+      "text": "Design the architecture for a new distributed system.",
+      "family": "architecture"
+    },
+    {
+      "text": "Run a performance diagnosis and identify the CPU bottleneck.",
+      "family": "performance"
+    },
+    {
+      "text": "对这个认证模块做安全审计。",
+      "family": "security"
+    }
+  ]
+}

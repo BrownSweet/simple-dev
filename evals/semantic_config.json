@@ -1,0 +1,104 @@
+{
+  "optimizer_hints": {
+    "capability": "Apply explicit simple-development constraints across planning, implementation, refactoring, and review",
+    "trigger_actions": [
+      "keep the change minimal",
+      "use fewer abstractions or files",
+      "simplify control flow",
+      "avoid N+1 queries"
+    ],
+    "exclusions": [
+      "generic development requests",
+      "strict TDD",
+      "architecture design",
+      "performance diagnosis",
+      "security review"
+    ]
+  },
+  "fallback_positive_concepts": [
+    "explicit_simple_request"
+  ],
+  "positive_concepts": {
+    "explicit_simple_request": {
+      "weight": 1.0,
+      "phrases": [
+        "minimal",
+        "minimal change",
+        "smallest change",
+        "straightforward",
+        "simple development",
+        "keep it simple",
+        "fewer abstractions",
+        "fewer files",
+        "fewer layers",
+        "flatter control flow",
+        "n+1",
+        "avoid n+1",
+        "n+1 queries",
+        "最小改动",
+        "最小方案",
+        "简单实现",
+        "保持简单",
+        "少抽象",
+        "少文件",
+        "减少层级",
+        "避免 n+1",
+        "检查 n+1"
+      ]
+    }
+  },
+  "negative_concepts": {
+    "generic_development": {
+      "weight": 0.3,
+      "exclusive": true,
+      "phrases": [
+        "implement this feature",
+        "fix this bug",
+        "review this pull request",
+        "实现这个功能",
+        "修复这个 bug",
+        "评审这个 pr"
+      ]
+    },
+    "strict_tdd": {
+      "weight": 0.35,
+      "exclusive": true,
+      "phrases": [
+        "strict tdd",
+        "red green refactor",
+        "严格 tdd",
+        "红绿重构"
+      ]
+    },
+    "architecture_work": {
+      "weight": 0.35,
+      "exclusive": true,
+      "phrases": [
+        "architecture redesign",
+        "design the architecture",
+        "架构重构",
+        "设计整体架构"
+      ]
+    },
+    "specialist_review": {
+      "weight": 0.35,
+      "exclusive": true,
+      "phrases": [
+        "performance diagnosis",
+        "security audit",
+        "性能诊断",
+        "安全审计"
+      ]
+    },
+    "explain_or_test_only": {
+      "weight": 0.35,
+      "exclusive": true,
+      "phrases": [
+        "explain this code",
+        "only run the tests",
+        "解释这段代码",
+        "只运行测试"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+interface:
+  display_name: "Simple Dev"
+  short_description: "Minimal changes with test and N+1 boundaries"
+  default_prompt: "Use $simple-dev to plan, implement, refactor, or review this task with the smallest correct change, existing project conventions, lightweight test-first verification, and explicit N+1 checks."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+  activation:
+    mode: "implicit"
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "metadata-adapter"
