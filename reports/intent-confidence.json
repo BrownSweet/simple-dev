@@ -1,0 +1,54 @@
+{
+  "score": 100,
+  "band": "high",
+  "gate_passed": true,
+  "strengths": [
+    "The recurring job is concrete enough to anchor the package.",
+    "Real input shape is explicit.",
+    "The hand-back output is concrete.",
+    "Boundary exclusions are already explicit.",
+    "Operational constraints are visible."
+  ],
+  "gaps": [],
+  "follow_up_questions": [],
+  "anchor_sentence": "Apply an explicit simplicity constraint across software planning, implementation, refactoring, and read-only review so the agent produces the smallest correct change that follows project conventions and remains verifiable. Primary output: A minimal plan, implementation, refactor, or review followed by a concise handoff containing actual scope, complexity tradeoff, before and after verification, database check, and unresolved risks.. Exclusions: generic software development requests without an explicit simplicity signal, strict red-green-refactor TDD workflows, architecture design or large migrations that need dedicated system-level reasoning, performance diagnosis and security audit workflows, mechanical simplification that would violate correctness, safety, project conventions, public interfaces, or transaction semantics.",
+  "recommended_action": "Intent is clear enough to package the first routeable version.",
+  "context": {
+    "job": "Apply an explicit simplicity constraint across software planning, implementation, refactoring, and read-only review so the agent produces the smallest correct change that follows project conventions and remains verifiable.",
+    "real_inputs": [
+      "a feature, bug fix, or refactoring request that explicitly asks for a minimal or straightforward solution",
+      "existing repository code, project conventions, public interfaces, acceptance criteria, and relevant tests",
+      "a plan or diff that needs review for over-abstraction, unnecessary scope, control-flow complexity, or N+1 risk",
+      "database workflows where batching must be weighed against transaction, locking, streaming, memory, or rate-limit semantics"
+    ],
+    "primary_output": "A minimal plan, implementation, refactor, or review followed by a concise handoff containing actual scope, complexity tradeoff, before and after verification, database check, and unresolved risks.",
+    "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+    "exclusions": [
+      "generic software development requests without an explicit simplicity signal",
+      "strict red-green-refactor TDD workflows",
+      "architecture design or large migrations that need dedicated system-level reasoning",
+      "performance diagnosis and security audit workflows",
+      "mechanical simplification that would violate correctness, safety, project conventions, public interfaces, or transaction semantics"
+    ],
+    "constraints": [
+      "correctness, safety, explicit requirements, project conventions, and acceptance criteria take priority over simplicity preferences",
+      "keep initial Skill context within the 700-token scaffold budget even at library maturity",
+      "do not add abstractions or files without a project convention, repeated responsibility, clear complexity reduction, or necessary test boundary",
+      "do not fabricate test, runtime, database, provider, human-review, or native-client evidence",
+      "publish one canonical Agent Skills package and represent unsupported platform behavior with explicit degradation notes"
+    ],
+    "standards": [
+      "trigger evaluation must cover explicit positives, generic negatives, specialist near-neighbors, Chinese requests, and four target invocation styles",
+      "recorded output fixtures must beat their baseline assertions while remaining labeled as fixtures",
+      "OpenAI, Claude, generic Agent Skills, and VS Code targets must pass structural conformance and package installation simulation",
+      "public beta release assets must include Apache-2.0, version parity, checksums, package verification, compatibility evidence, and a review expiry",
+      "provider-backed execution and native Claude or VS Code smoke tests remain missing evidence until actually observed"
+    ],
+    "correction": "The package evolved from a personal Codex-only constraint into a public Apache-2.0 Agent Skills library while preserving one neutral source and a strict 700-token initial context budget.",
+    "user_references": [
+      "the user-approved simple-dev development boundary plan",
+      "the user-approved four-target public Apache-2.0 release plan",
+      "official Codex, Claude Code, VS Code Agent Skills, and agentskills.io installation conventions"
+    ]
+  }
+}

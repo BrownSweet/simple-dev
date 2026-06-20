@@ -1,0 +1,25 @@
+{
+  "name": "simple-dev",
+  "version": "1.0.0",
+  "owner": "simple-dev maintainers",
+  "license": "Apache-2.0",
+  "updated_at": "2026-06-20",
+  "status": "experimental",
+  "release_channel": "beta",
+  "maturity_tier": "library",
+  "lifecycle_stage": "library",
+  "context_budget_tier": "scaffold",
+  "review_cadence": "quarterly",
+  "review_due": "2026-09-20",
+  "target_platforms": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible",
+    "vscode"
+  ],
+  "factory_components": [
+    "evals",
+    "reports"
+  ]
+}

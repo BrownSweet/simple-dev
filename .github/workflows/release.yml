@@ -1,0 +1,78 @@
+name: Validate and Release
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install development dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Check source contracts
+        run: python tools/release.py check
+
+      - name: Build release assets
+        run: python tools/release.py build
+
+      - name: Verify archives and install simulation
+        run: python tools/release.py verify
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install development dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Require tag and manifest version parity
+        run: |
+          VERSION=$(python -c 'import json; print(json.load(open("manifest.json"))["version"])')
+          test "$GITHUB_REF_NAME" = "v$VERSION"
+
+      - name: Build and verify release assets
+        run: |
+          python tools/release.py check
+          python tools/release.py build
+          python tools/release.py verify
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/*.zip dist/SHA256SUMS --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/*.zip dist/SHA256SUMS --verify-tag --generate-notes --title "simple-dev $GITHUB_REF_NAME"
+          fi

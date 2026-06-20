@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "name": "simple-dev",
+  "version": "0.0.0",
+  "description": "Unpublished initial baseline used only for the 1.0.0 upgrade audit.",
+  "targets": [],
+  "maturity": "scaffold",
+  "owner": "simple-dev maintainers",
+  "review_cadence": "quarterly",
+  "trust_level": "local",
+  "license": "Apache License",
+  "checksums": {},
+  "compatibility": {}
+}

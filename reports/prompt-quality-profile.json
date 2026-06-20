@@ -1,0 +1,120 @@
+{
+  "skill_name": "simple-dev",
+  "relevance": "prompt-aware",
+  "primary_task_family": {
+    "key": "execution_operation",
+    "label": "Execution operation",
+    "matched_keywords": [
+      "workflow",
+      "流程",
+      "执行"
+    ]
+  },
+  "task_families": [
+    {
+      "key": "execution_operation",
+      "label": "Execution operation",
+      "score": 3,
+      "matched_keywords": [
+        "workflow",
+        "流程",
+        "执行"
+      ],
+      "role_guidance": "Use an operator role with explicit boundaries, inputs, outputs, and failure handling.",
+      "task_guidance": "Convert the job into ordered steps with validation checks and stop conditions.",
+      "format_guidance": "Return a runbook-like handoff with commands, checks, owners, and next actions when relevant."
+    },
+    {
+      "key": "analytical_reasoning",
+      "label": "Analytical reasoning",
+      "score": 1,
+      "matched_keywords": [
+        "诊断"
+      ],
+      "role_guidance": "Use an analyst role that separates evidence, inference, uncertainty, and recommendation.",
+      "task_guidance": "State assumptions, compare alternatives, and make the decision path inspectable.",
+      "format_guidance": "Return findings, evidence, tradeoffs, recommendation, and residual risks."
+    }
+  ],
+  "complexity": {
+    "band": "medium",
+    "score": 4,
+    "reason": "some judgment and multi-step structure are needed"
+  },
+  "need_model": {
+    "explicit_need": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+    "implicit_need": "The reusable skill needs a stable role, task, and output contract rather than a one-off prompt.",
+    "scenario": "not yet explicit",
+    "user_level": "infer from examples and standards; ask only if it changes output depth",
+    "success_standard": "usable output with clear validation cues"
+  },
+  "rtf_to_skill": {
+    "role": "Use an operator role with explicit boundaries, inputs, outputs, and failure handling.",
+    "task": "Convert the job into ordered steps with validation checks and stop conditions.",
+    "format": "Return a runbook-like handoff with commands, checks, owners, and next actions when relevant."
+  },
+  "quality_matrix": [
+    {
+      "key": "completeness",
+      "label": "Completeness",
+      "score": 80,
+      "matched_signals": [
+        "output",
+        "constraint",
+        "输出",
+        "约束",
+        "标准"
+      ],
+      "repair": "Name missing inputs, outputs, constraints, or success standards before deepening the package."
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity",
+      "score": 85,
+      "matched_signals": [
+        "明确"
+      ],
+      "repair": "Replace broad verbs with observable actions and define what done means."
+    },
+    {
+      "key": "consistency",
+      "label": "Consistency",
+      "score": 90,
+      "matched_signals": [
+        "boundary",
+        "边界"
+      ],
+      "repair": "Check that role, task, format, exclusions, and examples do not contradict each other."
+    },
+    {
+      "key": "practicality",
+      "label": "Practicality",
+      "score": 95,
+      "matched_signals": [
+        "action",
+        "use",
+        "workflow",
+        "执行"
+      ],
+      "repair": "Add runnable steps, examples, or verification cues instead of abstract advice."
+    },
+    {
+      "key": "specificity",
+      "label": "Specificity",
+      "score": 75,
+      "matched_signals": [
+        "用户"
+      ],
+      "repair": "Anchor wording in the user's audience, domain nouns, and target outcome."
+    }
+  ],
+  "overall_quality_score": 85.0,
+  "self_repair_checks": [
+    "Check explicit need, implicit need, scenario, user level, and success standard before deepening.",
+    "Map Role, Task, and Format into skill behavior, not decorative prompt labels.",
+    "Ask one focused clarification only when missing information changes the package boundary.",
+    "Add tests or examples for prompt-heavy behavior before treating it as reusable.",
+    "Keep prompt methodology in references and reports instead of bloating SKILL.md."
+  ],
+  "reviewer_note": "Use this profile when the package depends on prompt behavior, role design, output contracts, or conversation quality."
+}

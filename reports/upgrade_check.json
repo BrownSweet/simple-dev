@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "schema_version": "2.0",
+  "generated_at": "2026-06-20T00:00:00Z",
+  "previous": {
+    "name": "simple-dev",
+    "version": "0.0.0",
+    "targets": []
+  },
+  "current": {
+    "name": "simple-dev",
+    "version": "1.0.0",
+    "targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible",
+      "vscode"
+    ]
+  },
+  "summary": {
+    "declared_bump": "major",
+    "recommended_bump": "minor",
+    "breaking_change_count": 0,
+    "added_target_count": 5,
+    "metadata_change_count": 3,
+    "checksum_change_count": 2,
+    "failure_count": 0,
+    "warning_count": 0
+  },
+  "upgrade_diff": {
+    "name_changed": false,
+    "added_targets": [
+      "agent-skills-compatible",
+      "claude",
+      "generic",
+      "openai",
+      "vscode"
+    ],
+    "removed_targets": [],
+    "compatibility_changes": [
+      {
+        "target": "agent-skills",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      },
+      {
+        "target": "agent-skills-compatible",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      },
+      {
+        "target": "claude",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      },
+      {
+        "target": "generic",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      },
+      {
+        "target": "openai",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      },
+      {
+        "target": "vscode",
+        "from": "missing",
+        "to": "pass",
+        "direction": "improved"
+      }
+    ],
+    "metadata_changes": [
+      {
+        "field": "description",
+        "from": "Unpublished initial baseline used only for the 1.0.0 upgrade audit.",
+        "to": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows."
+      },
+      {
+        "field": "maturity",
+        "from": "scaffold",
+        "to": "library"
+      },
+      {
+        "field": "trust_level",
+        "from": "local",
+        "to": "remote"
+      }
+    ],
+    "checksum_changes": [
+      {
+        "field": "archive_sha256",
+        "from": "",
+        "to": "55d2ae0918aa9f0ee5e1f8ceb826344bdd29f60cd18462464130809a76b066c8"
+      },
+      {
+        "field": "package_sha256",
+        "from": "",
+        "to": "51ff4ca6536290f11d604d94678b116fa02daf2a95bab35c6a24bceafd0f2044"
+      }
+    ]
+  },
+  "release_notes": [
+    "Recommended version bump: minor.",
+    "Added targets: agent-skills-compatible, claude, generic, openai, vscode.",
+    "Package or archive checksum changed; reviewers should verify package artifacts before release.",
+    "Package verification evidence: reports/package_verification.md."
+  ],
+  "failures": [],
+  "warnings": [],
+  "artifacts": {
+    "previous_package": "/Users/brown/program/www/person-skill/simple-dev/registry/baselines/simple-dev-0.0.0.json",
+    "current_package": "/Users/brown/program/www/person-skill/simple-dev/reports/registry_audit.json",
+    "json": "/Users/brown/program/www/person-skill/simple-dev/reports/upgrade_check.json",
+    "markdown": "/Users/brown/program/www/person-skill/simple-dev/reports/upgrade_check.md"
+  }
+}

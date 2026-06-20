@@ -22,6 +22,9 @@
     "explicit_simple_request": {
       "weight": 1.0,
       "phrases": [
+        "$simple-dev",
+        "/simple-dev",
+        "simple-dev skill",
         "minimal",
         "minimal change",
         "smallest change",

@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-06-20T00:00:00Z",
+  "package_count": 1,
+  "packages": [
+    {
+      "name": "simple-dev",
+      "version": "1.0.0",
+      "maturity": "library",
+      "owner": "simple-dev maintainers",
+      "targets": [
+        "openai",
+        "claude",
+        "generic",
+        "agent-skills-compatible",
+        "vscode"
+      ],
+      "package_metadata": "registry/packages/simple-dev.json",
+      "package_sha256": "51ff4ca6536290f11d604d94678b116fa02daf2a95bab35c6a24bceafd0f2044"
+    }
+  ]
+}

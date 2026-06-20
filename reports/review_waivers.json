@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "ok": true,
+  "skill_dir": "/Users/brown/program/www/person-skill/simple-dev",
+  "generated_at": "2026-06-20",
+  "summary": {
+    "waiver_count": 1,
+    "active_count": 1,
+    "expired_count": 0,
+    "invalid_count": 0,
+    "covered_gate_count": 1,
+    "covered_gate_keys": [
+      "output-lab"
+    ],
+    "waiver_candidate_count": 1,
+    "waiverable_open_count": 0,
+    "non_waivable_count": 0
+  },
+  "policy": {
+    "blocker_waivers_allowed": false,
+    "minimum_reason_chars": 20,
+    "expires_required": true,
+    "review_studio_gate_keys": [
+      "architecture-maintainability",
+      "context-budget",
+      "intent-canvas",
+      "operations-loop",
+      "output-lab",
+      "permission-gates",
+      "permission-runtime",
+      "python-compat",
+      "registry-audit",
+      "release-notes",
+      "review-waivers",
+      "runtime-matrix",
+      "skill-atlas",
+      "trigger-lab",
+      "trust-report",
+      "world-class-evidence"
+    ],
+    "known_gate_keys": [
+      "architecture-maintainability",
+      "context-budget",
+      "intent-canvas",
+      "operations-loop",
+      "output-lab",
+      "permission-gates",
+      "permission-runtime",
+      "python-compat",
+      "registry-audit",
+      "release-notes",
+      "runtime-matrix",
+      "skill-atlas",
+      "trigger-lab",
+      "trust-report"
+    ],
+    "waiverable_gate_keys": [
+      "architecture-maintainability",
+      "context-budget",
+      "intent-canvas",
+      "operations-loop",
+      "output-lab",
+      "permission-gates",
+      "permission-runtime",
+      "python-compat",
+      "registry-audit",
+      "release-notes",
+      "runtime-matrix",
+      "skill-atlas",
+      "trigger-lab",
+      "trust-report"
+    ],
+    "non_waivable_gate_keys": [
+      "review-waivers",
+      "world-class-evidence"
+    ]
+  },
+  "waivers": [
+    {
+      "id": "e170c637ea83",
+      "gate_key": "output-lab",
+      "decision": "accepted-risk",
+      "reviewer": "simple-dev maintainers",
+      "reason": "The 1.0.0 beta release explicitly discloses recorded-fixture-only output evidence and makes no provider-backed or human-adjudicated superiority claim.",
+      "created_at": "2026-06-20",
+      "expires_at": "2026-09-20",
+      "evidence": "reports/output_execution_runs.md",
+      "scope": "1.0.0 beta recorded-fixture-only release",
+      "status": "active",
+      "validation": {
+        "failures": [],
+        "warnings": []
+      }
+    }
+  ],
+  "waiver_candidates": [
+    {
+      "gate_key": "output-lab",
+      "label": "Output Lab",
+      "status": "covered",
+      "waiver_allowed": true,
+      "decision_options": [
+        "accepted-risk",
+        "false-positive",
+        "temporary-exception"
+      ],
+      "risk_summary": "review pending 5; model-executed 0; output failures 0",
+      "required_review": [
+        "Reviewer confirms this release does not claim provider-backed or human-adjudicated output superiority.",
+        "Reviewer names the release scope and expiry date.",
+        "Reviewer links output_review_adjudication or output_execution evidence."
+      ],
+      "suggested_evidence": "reports/output_review_adjudication.md",
+      "suggested_command": "python3 scripts/yao.py review-waivers . --add-waiver --gate-key output-lab --reviewer \"<reviewer>\" --reason \"Output Lab has pending human/provider evidence; accepted only for this bounded review scope.\" --expires-at 2027-06-20 --evidence reports/output_review_adjudication.md",
+      "world_class_boundary": "Does not count as provider, human, or public world-class completion evidence."
+    }
+  ],
+  "failures": [],
+  "warnings": [],
+  "artifacts": {
+    "json": "/Users/brown/program/www/person-skill/simple-dev/reports/review_waivers.json",
+    "markdown": "/Users/brown/program/www/person-skill/simple-dev/reports/review_waivers.md"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-06-20",
+  "capabilities": {
+    "none_required": {
+      "decision": "not-required",
+      "reviewer": "simple-dev maintainers",
+      "scope": "The runtime Skill is declarative guidance and ships no executable scripts.",
+      "reason": "No runtime network, file-write, subprocess, interactive, credential, or account capability is declared.",
+      "expires_at": "2026-09-20",
+      "evidence": [
+        "reports/security_trust_report.json",
+        "SKILL.md"
+      ],
+      "target_enforcement": {
+        "openai": "No privileged capability is declared by the OpenAI adapter.",
+        "claude": "No privileged capability is declared by the Claude adapter.",
+        "generic": "No privileged capability is declared by the generic adapter.",
+        "vscode": "No privileged capability is declared by the VS Code adapter."
+      }
+    }
+  }
+}

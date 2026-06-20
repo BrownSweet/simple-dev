@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-20T00:00:00Z",
+  "release_status": "beta",
+  "targets": {
+    "openai": {
+      "status": "missing evidence",
+      "detail": "Codex CLI 0.142.0-alpha.6 found the isolated project and accepted the explicit $simple-dev prompt, but the provider-backed run did not complete: the sandboxed attempt could not reach OpenAI and the approved network attempt produced no result before timeout. Discovery plus invocation is therefore not claimed as a passing native smoke test."
+    },
+    "claude": {
+      "status": "missing evidence",
+      "detail": "Claude Code is not installed in the current environment; only source and adapter format compatibility were checked."
+    },
+    "generic": {
+      "status": "spec-validated",
+      "detail": "The canonical package passed Agent Skills structure, archive safety, and temporary installation checks; no specific generic client runtime was tested."
+    },
+    "vscode": {
+      "status": "missing evidence",
+      "detail": "VS Code CLI is not installed in the current environment; only source and adapter format compatibility were checked."
+    }
+  }
+}

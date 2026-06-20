@@ -1,0 +1,57 @@
+{
+  "schema_version": "2.0",
+  "name": "simple-dev",
+  "version": "1.0.0",
+  "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+  "targets": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible",
+    "vscode"
+  ],
+  "maturity": "library",
+  "owner": "simple-dev maintainers",
+  "review_cadence": "quarterly",
+  "trust_level": "remote",
+  "license": "Apache License",
+  "checksums": {
+    "package_sha256": "51ff4ca6536290f11d604d94678b116fa02daf2a95bab35c6a24bceafd0f2044",
+    "archive_sha256": "55d2ae0918aa9f0ee5e1f8ceb826344bdd29f60cd18462464130809a76b066c8"
+  },
+  "compatibility": {
+    "openai": "pass",
+    "claude": "pass",
+    "agent-skills": "pass",
+    "vscode": "pass",
+    "generic": "pass",
+    "agent-skills-compatible": "pass"
+  },
+  "source": {
+    "skill_dir": "/Users/brown/program/www/person-skill/simple-dev",
+    "skill_ir": "skill-ir/examples/simple-dev.json",
+    "ir_schema_version": "2.0.0",
+    "canonical_metadata": "agents/interface.yaml"
+  },
+  "artifacts": {
+    "overview_html": "reports/skill-overview.html",
+    "review_studio_html": "reports/review-studio.html",
+    "trust_report": "reports/security_trust_report.md",
+    "conformance_matrix": "reports/conformance_matrix.md",
+    "compiled_targets": "reports/compiled_targets.md",
+    "package_verification": "reports/package_verification.md",
+    "install_simulation": "reports/install_simulation.md",
+    "adoption_drift": "reports/adoption_drift_report.md",
+    "review_waivers": "reports/review_waivers.md",
+    "review_annotations": "",
+    "package_metadata": "registry/packages/simple-dev.json"
+  },
+  "distribution": {
+    "archive_verified": true,
+    "archive_sha256": "55d2ae0918aa9f0ee5e1f8ceb826344bdd29f60cd18462464130809a76b066c8",
+    "package_verification": "reports/package_verification.json",
+    "install_simulated": true,
+    "install_simulation": "reports/install_simulation.json"
+  },
+  "generated_at": "2026-06-20T00:00:00Z"
+}

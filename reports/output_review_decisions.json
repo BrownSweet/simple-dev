@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "",
+  "reviewed_at": "",
+  "review_integrity": {
+    "blind_pack_sha256": "e4646bd66f933be29295f790b7e91f65ab50402bfae881d225d7601b15332e2a",
+    "case_count": 5,
+    "case_ids": [
+      "minimal-bug-fix",
+      "minimal-feature-plan",
+      "layering-review",
+      "batch-query",
+      "per-row-exception"
+    ],
+    "prompt_sha256_by_case": {
+      "minimal-bug-fix": "ddb06057d8e5deb4b9302d5dc790d656f9f2036a05bc9a90b33585f30fe387e2",
+      "minimal-feature-plan": "d55d80c4bcaeee9a5b96b8b00f623382fece747a07e6c494a98a95e536f1aea4",
+      "layering-review": "6295bbb8fcbab7930b5bca7b685d309bf56c140d537ada4bc7bf9e07795c7f1a",
+      "batch-query": "aa4d081dda5f6ddf82691de38f0e02b193a89c7eea4b2bbf521dcd3f210021eb",
+      "per-row-exception": "4fe3c9b8a6beff5359175be4cd48cadd53783a0da4f0b688c9f7030a35a59ad4"
+    }
+  },
+  "reviewer_attestation": {
+    "blind_review_completed_before_answer_key": false,
+    "answer_key_not_opened_before_decisions": false,
+    "raw_content_excluded": true,
+    "reviewer_reason_required": true
+  },
+  "decision_contract": {
+    "winner_variant": "Use A or B after reading the blind review pack. Leave blank when pending.",
+    "confidence": "Optional number from 0 to 1.",
+    "reason": "Required reviewer rationale. Do not reveal baseline or with-skill labels before adjudication.",
+    "reviewer_attestation": "Set blind_review_completed_before_answer_key and answer_key_not_opened_before_decisions to true only after a real blind review."
+  },
+  "decisions": [
+    {
+      "case_id": "minimal-bug-fix",
+      "winner_variant": "",
+      "confidence": null,
+      "reason": ""
+    },
+    {
+      "case_id": "minimal-feature-plan",
+      "winner_variant": "",
+      "confidence": null,
+      "reason": ""
+    },
+    {
+      "case_id": "layering-review",
+      "winner_variant": "",
+      "confidence": null,
+      "reason": ""
+    },
+    {
+      "case_id": "batch-query",
+      "winner_variant": "",
+      "confidence": null,
+      "reason": ""
+    },
+    {
+      "case_id": "per-row-exception",
+      "winner_variant": "",
+      "confidence": null,
+      "reason": ""
+    }
+  ]
+}

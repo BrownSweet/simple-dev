@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "ok": true,
+  "cases": "/Users/brown/program/www/person-skill/simple-dev/evals/output/cases.jsonl",
+  "runner": {
+    "mode": "recorded_fixture",
+    "command": [],
+    "timeout_seconds": null
+  },
+  "summary": {
+    "case_count": 5,
+    "variant_run_count": 10,
+    "command_executed_count": 0,
+    "model_executed_count": 0,
+    "recorded_fixture_count": 10,
+    "timing_observed_count": 0,
+    "token_observed_count": 0,
+    "token_estimated_count": 10,
+    "baseline_pass_rate": 0.0,
+    "with_skill_pass_rate": 100.0,
+    "delta": 100.0,
+    "regression_count": 0,
+    "failure_count": 0,
+    "gate_pass": true
+  },
+  "runs": [
+    {
+      "case_id": "minimal-bug-fix",
+      "variant": "baseline",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 4,
+        "output_tokens": 4,
+        "total_tokens": 8,
+        "estimated": true
+      },
+      "score": 0.0,
+      "passed_count": 0,
+      "failed_count": 4,
+      "failed_assertions": [
+        "has-scope",
+        "has-tradeoff",
+        "has-verification",
+        "has-db-and-risk"
+      ],
+      "output_sha256": "624830124e2159e85054b76e30a2a383fc0da75580663cb779a3ef6f163d2218",
+      "failure": ""
+    },
+    {
+      "case_id": "minimal-bug-fix",
+      "variant": "with_skill",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 4,
+        "output_tokens": 23,
+        "total_tokens": 27,
+        "estimated": true
+      },
+      "score": 100.0,
+      "passed_count": 4,
+      "failed_count": 0,
+      "failed_assertions": [],
+      "output_sha256": "405042553f6a7aaefd70a9e770aa2991c28fa3015e4c71e989388fcf4a682dfc",
+      "failure": ""
+    },
+    {
+      "case_id": "minimal-feature-plan",
+      "variant": "baseline",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 6,
+        "output_tokens": 8,
+        "total_tokens": 14,
+        "estimated": true
+      },
+      "score": 0.0,
+      "passed_count": 0,
+      "failed_count": 3,
+      "failed_assertions": [
+        "has-plan-boundary",
+        "rejects-speculation",
+        "has-output-contract"
+      ],
+      "output_sha256": "3517ef866f996dfb5600c638195ca31584aa75f25b1e9e1f5953e3b8510778d5",
+      "failure": ""
+    },
+    {
+      "case_id": "minimal-feature-plan",
+      "variant": "with_skill",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 6,
+        "output_tokens": 38,
+        "total_tokens": 44,
+        "estimated": true
+      },
+      "score": 100.0,
+      "passed_count": 3,
+      "failed_count": 0,
+      "failed_assertions": [],
+      "output_sha256": "7f3a9764a421662c4a1805963136aa782dcd6c220806bd73e16b7d073c3ee702",
+      "failure": ""
+    },
+    {
+      "case_id": "layering-review",
+      "variant": "baseline",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 6,
+        "output_tokens": 5,
+        "total_tokens": 11,
+        "estimated": true
+      },
+      "score": 0.0,
+      "passed_count": 0,
+      "failed_count": 4,
+      "failed_assertions": [
+        "review-only",
+        "names-layer-cost",
+        "names-n-plus-one",
+        "keeps-specialist-boundary"
+      ],
+      "output_sha256": "7df4f98f6cfcf1c5eff0a27a5a6d856cb82480d85b00de49d4ff96504b2cb61b",
+      "failure": ""
+    },
+    {
+      "case_id": "layering-review",
+      "variant": "with_skill",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 6,
+        "output_tokens": 47,
+        "total_tokens": 53,
+        "estimated": true
+      },
+      "score": 100.0,
+      "passed_count": 4,
+      "failed_count": 0,
+      "failed_assertions": [],
+      "output_sha256": "44ebdb6f554c8db78f56d0e753b7fbe3c7168a5f7887a59e5836982679154e71",
+      "failure": ""
+    },
+    {
+      "case_id": "batch-query",
+      "variant": "baseline",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 4,
+        "output_tokens": 6,
+        "total_tokens": 10,
+        "estimated": true
+      },
+      "score": 0.0,
+      "passed_count": 0,
+      "failed_count": 3,
+      "failed_assertions": [
+        "uses-batch-read",
+        "proves-query-bound",
+        "avoids-extra-layer"
+      ],
+      "output_sha256": "c1042f9f430578f6ed66666308f81a7811e526c0e2ca073101e0824405c0d108",
+      "failure": ""
+    },
+    {
+      "case_id": "batch-query",
+      "variant": "with_skill",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 4,
+        "output_tokens": 36,
+        "total_tokens": 40,
+        "estimated": true
+      },
+      "score": 100.0,
+      "passed_count": 3,
+      "failed_count": 0,
+      "failed_assertions": [],
+      "output_sha256": "93fd85309f2f6fef611083ddd25e78761ffc084b369a90da4fb544b556ec5f06",
+      "failure": ""
+    },
+    {
+      "case_id": "per-row-exception",
+      "variant": "baseline",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 6,
+        "total_tokens": 14,
+        "estimated": true
+      },
+      "score": 0.0,
+      "passed_count": 0,
+      "failed_count": 3,
+      "failed_assertions": [
+        "permits-semantic-exception",
+        "bounds-query-scale",
+        "preserves-verification"
+      ],
+      "output_sha256": "370125b6f76dd2dabb2fc0744fe02640925a016ceb7cf422e981b517fed7cc08",
+      "failure": ""
+    },
+    {
+      "case_id": "per-row-exception",
+      "variant": "with_skill",
+      "status": "pass",
+      "execution_mode": "recorded_fixture",
+      "model_executed": false,
+      "command_executed": false,
+      "duration_ms": null,
+      "provider": "",
+      "model": "",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 38,
+        "total_tokens": 46,
+        "estimated": true
+      },
+      "score": 100.0,
+      "passed_count": 3,
+      "failed_count": 0,
+      "failed_assertions": [],
+      "output_sha256": "0501cc120a7137a01f09652c009a70f38ed88f6addb20ae8a9232953931c3632",
+      "failure": ""
+    }
+  ],
+  "failures": [],
+  "artifacts": {
+    "json": "/Users/brown/program/www/person-skill/simple-dev/reports/output_execution_runs.json",
+    "markdown": "/Users/brown/program/www/person-skill/simple-dev/reports/output_execution_runs.md"
+  }
+}

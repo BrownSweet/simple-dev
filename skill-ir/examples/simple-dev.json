@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0",
+  "name": "simple-dev",
+  "title": "Simple Dev",
+  "job_to_be_done": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+  "trigger_surface": {
+    "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+    "should_trigger": [
+      "Use $simple-dev to make the smallest correct change in Codex.",
+      "/simple-dev refactor this module with fewer layers while preserving behavior.",
+      "/simple-dev review this workspace change for unnecessary abstractions and N+1 risks.",
+      "Load the simple-dev skill and plan the minimal implementation.",
+      "Fix this bug with the smallest change and keep the implementation straightforward.",
+      "Keep this implementation minimal and straightforward, with as few abstractions and files as practical.",
+      "Plan the smallest change that satisfies this requirement; do not design future architecture.",
+      "Refactor this service into fewer layers while preserving behavior.",
+      "Review this diff for unnecessary abstraction and N+1 queries.",
+      "请用最小改动修复这个问题，保持实现简单。",
+      "检查这段查询有没有 N+1，不要引入多余层级。",
+      "Let the architecture workflow lead this architecture redesign, but keep the proposal minimal with fewer layers."
+    ],
+    "should_not_trigger": [
+      "Implement this feature.",
+      "Fix this bug.",
+      "Explain this code to me.",
+      "只运行测试，不要修改代码。"
+    ],
+    "edge_cases": [
+      "Use strict TDD and follow the full red green refactor loop.",
+      "Design the architecture for a new distributed system.",
+      "Run a performance diagnosis and identify the CPU bottleneck.",
+      "对这个认证模块做安全审计。"
+    ]
+  },
+  "workflow": {
+    "steps": [
+      "Confirm the request explicitly asks for minimal, straightforward, low-abstraction, or N+1-aware development.",
+      "Classify the activity as planning, implementation, refactoring, or read-only review.",
+      "Inspect project conventions, public interfaces, acceptance criteria, and the relevant verification baseline.",
+      "Choose and execute the smallest correct approach without unrelated cleanup or speculative architecture.",
+      "Run relevant tests and directly affected checks, then return every field in the output contract."
+    ],
+    "decision_points": [
+      "Correctness, safety, explicit requirements, project conventions, and acceptance criteria take priority over simplicity preferences.",
+      "Add an abstraction or file only for project conventions, a real repeated responsibility, a clear complexity reduction, or a necessary test boundary.",
+      "Prefer batch database access, but preserve per-item transactions, locks, streaming, memory limits, rate limits, and established project semantics when required.",
+      "Let dedicated TDD, architecture, performance, security, or migration workflows lead their specialist tasks.",
+      "Stop scope expansion and request direction when a conflict cannot be resolved safely from repository evidence."
+    ],
+    "failure_modes": [
+      "The skill activates for generic development requests without an explicit simplicity signal.",
+      "A mechanically smaller design violates correctness, safety, project conventions, or a public interface.",
+      "Unrelated cleanup or speculative abstractions expand the requested change.",
+      "A blanket ban on per-item database operations changes transaction or locking semantics.",
+      "The final response invents test, runtime, database, or native-client evidence that was not observed."
+    ]
+  },
+  "resources": {
+    "references": [],
+    "scripts": [],
+    "assets": [],
+    "reports": []
+  },
+  "eval_plan": {
+    "trigger": [
+      "evals/output/cases.jsonl",
+      "evals/packaging_expectations.json",
+      "evals/semantic_config.json",
+      "evals/trigger_cases.json"
+    ],
+    "output": [
+      "evals/output/cases.jsonl"
+    ],
+    "adversarial": [],
+    "baseline": "without_skill"
+  },
+  "risk": {
+    "output_risk": "medium",
+    "execution_risk": "low",
+    "trust_boundary": "external"
+  },
+  "governance": {
+    "owner": "simple-dev maintainers",
+    "maturity": "library",
+    "review_cadence": "quarterly",
+    "review_due": "2026-09-20"
+  },
+  "targets": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible",
+    "vscode"
+  ],
+  "source_files": [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "manifest.json",
+    "agents/interface.yaml",
+    "evals/trigger_cases.json",
+    "evals/output/cases.jsonl"
+  ]
+}

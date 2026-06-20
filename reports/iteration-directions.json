@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "skill_name": "simple-dev",
+    "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.",
+    "maturity_tier": "library",
+    "selection_rule": "Pick the three smallest next steps that increase reliability more than they increase context cost.",
+    "recommended_now": "Tighten trigger and exclusions",
+    "recommended_now_why": "The package needs clearer near-neighbor exclusions before it grows.",
+    "defer_for_now": "Create an iteration evidence loop"
+  },
+  "directions": [
+    {
+      "priority": 1,
+      "title": "Tighten trigger and exclusions",
+      "why": "The package needs clearer near-neighbor exclusions before it grows.",
+      "actions": [
+        "Add 3 to 5 should-trigger and should-not-trigger examples.",
+        "Refine the frontmatter description to name the recurring job and non-goals.",
+        "Run a first trigger evaluation pass before expanding the package."
+      ],
+      "unlocks": "Cleaner routing and fewer accidental activations.",
+      "do_now": "Do this first.",
+      "wait_on": "Wait to add broader structure until this move clearly improves reliability."
+    },
+    {
+      "priority": 2,
+      "title": "Add the first execution asset",
+      "why": "The package is still mostly prose. Add one asset that removes repeated manual work.",
+      "actions": [
+        "Move stable procedural guidance into references if users will need it repeatedly.",
+        "Create one deterministic helper script if a repeated step can be executed instead of described.",
+        "Keep the main SKILL.md compact and route-oriented."
+      ],
+      "unlocks": "Stronger execution quality without bloating the entrypoint.",
+      "do_now": "Do this after the first move lands cleanly.",
+      "wait_on": "Wait until the package has evidence that this extra structure is justified."
+    },
+    {
+      "priority": 12,
+      "title": "Create an iteration evidence loop",
+      "why": "The package should show what changed and why after the first draft.",
+      "actions": [
+        "Generate the HTML skill report and keep it aligned with the package.",
+        "Record reference scan choices and non-goals.",
+        "Capture the next iteration choice explicitly before adding more files."
+      ],
+      "unlocks": "A clearer path for the next author or reviewer.",
+      "do_now": "Do this after the first move lands cleanly.",
+      "wait_on": "Wait until the package has evidence that this extra structure is justified."
+    }
+  ]
+}

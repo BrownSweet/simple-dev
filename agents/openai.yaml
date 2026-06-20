@@ -1,6 +1,6 @@
 interface:
   display_name: "Simple Dev"
-  short_description: "Minimal changes with test and N+1 boundaries"
-  default_prompt: "Use $simple-dev to plan, implement, refactor, or review this task with the smallest correct change, existing project conventions, lightweight test-first verification, and explicit N+1 checks."
+  short_description: "Minimal, verified changes without over-abstraction"
+  default_prompt: "Use $simple-dev for the smallest correct change: follow project patterns, verify before and after, and check N+1 risks."
 policy:
   allow_implicit_invocation: true

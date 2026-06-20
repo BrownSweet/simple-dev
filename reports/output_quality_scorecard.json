@@ -1,0 +1,707 @@
+{
+  "ok": true,
+  "cases": "/Users/brown/program/www/person-skill/simple-dev/evals/output/cases.jsonl",
+  "summary": {
+    "case_count": 5,
+    "file_backed_case_count": 0,
+    "near_neighbor_case_count": 0,
+    "boundary_case_count": 0,
+    "baseline_pass_rate": 0.0,
+    "with_skill_pass_rate": 100.0,
+    "delta": 100.0,
+    "regression_count": 0,
+    "gate_pass": true,
+    "failure_taxonomy": [],
+    "blind_pair_count": 5
+  },
+  "results": [
+    {
+      "id": "minimal-bug-fix",
+      "prompt": "修复空值崩溃，保持最小改动。",
+      "input_files": [],
+      "metadata": {},
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 4,
+        "checks": [
+          {
+            "id": "has-scope",
+            "description": "交付说明实际范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "实际范围"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-tradeoff",
+            "description": "交付说明复杂度取舍。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "复杂度取舍"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-verification",
+            "description": "交付包含修改前后验证。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "修改前验证",
+              "修改后验证"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-db-and-risk",
+            "description": "交付包含数据库检查和风险。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "数据库检查",
+              "未解决风险"
+            ],
+            "present_forbidden": []
+          }
+        ],
+        "failed": [
+          {
+            "id": "has-scope",
+            "description": "交付说明实际范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "实际范围"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-tradeoff",
+            "description": "交付说明复杂度取舍。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "复杂度取舍"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-verification",
+            "description": "交付包含修改前后验证。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "修改前验证",
+              "修改后验证"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-db-and-risk",
+            "description": "交付包含数据库检查和风险。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "数据库检查",
+              "未解决风险"
+            ],
+            "present_forbidden": []
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 4,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "has-scope",
+            "description": "交付说明实际范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-tradeoff",
+            "description": "交付说明复杂度取舍。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-verification",
+            "description": "交付包含修改前后验证。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-db-and-risk",
+            "description": "交付包含数据库检查和风险。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "minimal-feature-plan",
+      "prompt": "规划这个导出功能的最小方案，不要提前设计扩展框架。",
+      "input_files": [],
+      "metadata": {},
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "has-plan-boundary",
+            "description": "规划限定实际范围与修改区域。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "实际范围",
+              "修改区域",
+              "验证方式"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "rejects-speculation",
+            "description": "规划拒绝未经证明的扩展架构。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不新增工厂或插件接口"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-output-contract",
+            "description": "规划保留完整交付字段。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "复杂度取舍",
+              "数据库检查",
+              "未解决风险"
+            ],
+            "present_forbidden": []
+          }
+        ],
+        "failed": [
+          {
+            "id": "has-plan-boundary",
+            "description": "规划限定实际范围与修改区域。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "实际范围",
+              "修改区域",
+              "验证方式"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "rejects-speculation",
+            "description": "规划拒绝未经证明的扩展架构。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不新增工厂或插件接口"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-output-contract",
+            "description": "规划保留完整交付字段。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "复杂度取舍",
+              "数据库检查",
+              "未解决风险"
+            ],
+            "present_forbidden": []
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "has-plan-boundary",
+            "description": "规划限定实际范围与修改区域。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "rejects-speculation",
+            "description": "规划拒绝未经证明的扩展架构。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "has-output-contract",
+            "description": "规划保留完整交付字段。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "layering-review",
+      "prompt": "评审这个 PR 是否过度分层，但不要修改代码。",
+      "input_files": [],
+      "metadata": {},
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 4,
+        "checks": [
+          {
+            "id": "review-only",
+            "description": "评审明确只读范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "只读评审"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-layer-cost",
+            "description": "评审说明无价值层级的追踪成本。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "增加跳转",
+              "未形成独立职责"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-n-plus-one",
+            "description": "评审检查 N+1。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "N+1"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-specialist-boundary",
+            "description": "评审说明不替代安全和架构流程。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不属于本次 simple-dev 评审"
+            ],
+            "present_forbidden": []
+          }
+        ],
+        "failed": [
+          {
+            "id": "review-only",
+            "description": "评审明确只读范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "只读评审"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-layer-cost",
+            "description": "评审说明无价值层级的追踪成本。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "增加跳转",
+              "未形成独立职责"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-n-plus-one",
+            "description": "评审检查 N+1。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "N+1"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-specialist-boundary",
+            "description": "评审说明不替代安全和架构流程。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不属于本次 simple-dev 评审"
+            ],
+            "present_forbidden": []
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 4,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "review-only",
+            "description": "评审明确只读范围。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-layer-cost",
+            "description": "评审说明无价值层级的追踪成本。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "names-n-plus-one",
+            "description": "评审检查 N+1。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "keeps-specialist-boundary",
+            "description": "评审说明不替代安全和架构流程。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "batch-query",
+      "prompt": "简单修复订单列表的 N+1 查询。",
+      "input_files": [],
+      "metadata": {},
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "uses-batch-read",
+            "description": "改动使用批量读取。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "批量读取"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "proves-query-bound",
+            "description": "交付提供前后查询数量。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "1+N",
+              "固定 2 次"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-extra-layer",
+            "description": "未为优化新增无必要层级。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不新增 repository 层"
+            ],
+            "present_forbidden": []
+          }
+        ],
+        "failed": [
+          {
+            "id": "uses-batch-read",
+            "description": "改动使用批量读取。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "批量读取"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "proves-query-bound",
+            "description": "交付提供前后查询数量。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "1+N",
+              "固定 2 次"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-extra-layer",
+            "description": "未为优化新增无必要层级。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "不新增 repository 层"
+            ],
+            "present_forbidden": []
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "uses-batch-read",
+            "description": "改动使用批量读取。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "proves-query-bound",
+            "description": "交付提供前后查询数量。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "avoids-extra-layer",
+            "description": "未为优化新增无必要层级。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    },
+    {
+      "id": "per-row-exception",
+      "prompt": "批处理任务需要逐条加锁更新，按 simple-dev 原则实现。",
+      "input_files": [],
+      "metadata": {},
+      "baseline": {
+        "score": 0.0,
+        "passed_count": 0,
+        "failed_count": 3,
+        "checks": [
+          {
+            "id": "permits-semantic-exception",
+            "description": "语义需要时允许逐条数据库操作。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "允许循环内访问",
+              "事务锁语义"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "bounds-query-scale",
+            "description": "交付说明处理规模。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "每批 100 条"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "preserves-verification",
+            "description": "交付验证并发和失败隔离。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "并发与失败隔离测试通过"
+            ],
+            "present_forbidden": []
+          }
+        ],
+        "failed": [
+          {
+            "id": "permits-semantic-exception",
+            "description": "语义需要时允许逐条数据库操作。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "允许循环内访问",
+              "事务锁语义"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "bounds-query-scale",
+            "description": "交付说明处理规模。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "每批 100 条"
+            ],
+            "present_forbidden": []
+          },
+          {
+            "id": "preserves-verification",
+            "description": "交付验证并发和失败隔离。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": false,
+            "missing": [
+              "并发与失败隔离测试通过"
+            ],
+            "present_forbidden": []
+          }
+        ]
+      },
+      "with_skill": {
+        "score": 100.0,
+        "passed_count": 3,
+        "failed_count": 0,
+        "checks": [
+          {
+            "id": "permits-semantic-exception",
+            "description": "语义需要时允许逐条数据库操作。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "bounds-query-scale",
+            "description": "交付说明处理规模。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          },
+          {
+            "id": "preserves-verification",
+            "description": "交付验证并发和失败隔离。",
+            "weight": 1.0,
+            "failure_type": "assertion_failed",
+            "passed": true,
+            "missing": [],
+            "present_forbidden": []
+          }
+        ],
+        "failed": []
+      },
+      "delta": 100.0,
+      "winner": "with_skill",
+      "failure_taxonomy": []
+    }
+  ],
+  "failures": [],
+  "blind_review": {
+    "pack": "/Users/brown/program/www/person-skill/simple-dev/reports/output_blind_review_pack.json",
+    "answer_key": "/Users/brown/program/www/person-skill/simple-dev/reports/output_blind_answer_key.json",
+    "pair_count": 5
+  },
+  "artifacts": {
+    "json": "/Users/brown/program/www/person-skill/simple-dev/reports/output_quality_scorecard.json",
+    "markdown": "/Users/brown/program/www/person-skill/simple-dev/reports/output_quality_scorecard.md",
+    "blind_review_pack_json": "/Users/brown/program/www/person-skill/simple-dev/reports/output_blind_review_pack.json",
+    "blind_review_pack_md": "/Users/brown/program/www/person-skill/simple-dev/reports/output_blind_review_pack.md",
+    "blind_answer_key_json": "/Users/brown/program/www/person-skill/simple-dev/reports/output_blind_answer_key.json"
+  }
+}

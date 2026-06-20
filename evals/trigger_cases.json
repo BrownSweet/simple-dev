@@ -2,6 +2,22 @@
   "recommended_threshold": 0.48,
   "should_trigger": [
     {
+      "text": "Use $simple-dev to make the smallest correct change in Codex.",
+      "family": "openai_explicit"
+    },
+    {
+      "text": "/simple-dev refactor this module with fewer layers while preserving behavior.",
+      "family": "claude_explicit"
+    },
+    {
+      "text": "/simple-dev review this workspace change for unnecessary abstractions and N+1 risks.",
+      "family": "vscode_explicit"
+    },
+    {
+      "text": "Load the simple-dev skill and plan the minimal implementation.",
+      "family": "generic_explicit"
+    },
+    {
       "text": "Fix this bug with the smallest change and keep the implementation straightforward.",
       "family": "generic_plus_explicit"
     },
