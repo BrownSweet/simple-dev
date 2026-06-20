@@ -2,7 +2,7 @@
 
 `simple-dev` 是一个跨平台 Agent Skill，用于在规划、实现、重构和代码评审中约束代理选择最小正确方案：遵循现有项目模式、减少无效抽象、执行轻量测试优先，并主动检查 N+1。
 
-当前版本为 `1.0.0-beta`。标准格式兼容 OpenAI Codex、Claude Code、通用 Agent Skills 客户端和 VS Code/GitHub Copilot。通用包已通过规范、归档和安装模拟；Codex 的 provider-backed smoke test 未完成，Claude 和 VS Code 客户端在当前环境中不可用，因此三个原生运行状态均明确标记为 `missing evidence`。
+当前版本为 `1.0.1`。标准格式兼容 OpenAI Codex、Claude Code（2.1.0+）、通用 Agent Skills 客户端和 VS Code/GitHub Copilot。Claude Code 兼容性已在 2026-06-20 验证并支持。
 
 ## 能力边界
 
@@ -148,6 +148,28 @@ Skill 的最终交付应简要包含：
 - 同名 Skill 不会自动合并；出现重复项时，只保留一个有效安装位置。
 
 ## 排障
+
+### Claude Code 中 Skill 不可用
+
+确保：
+1. Claude Code 版本 ≥ 2.1.0（运行 `claude --version`）
+2. 技能安装到 `~/.claude/skills/simple-dev/`（**不是** `.claude/skills`）
+3. 完全重启 Claude Code（关闭所有进程，不仅仅是窗口）
+4. 尝试显式调用：输入 `/simple-dev` 并按 Tab 查看是否出现
+
+如果仍未出现：
+```bash
+# 验证安装位置
+ls -la ~/.claude/skills/simple-dev/SKILL.md
+
+# 检查 frontmatter
+head -10 ~/.claude/skills/simple-dev/SKILL.md
+
+# 删除并重新安装
+rm -rf ~/.claude/skills/simple-dev
+mkdir -p ~/.claude/skills
+cp -R /path/to/simple-dev ~/.claude/skills/simple-dev
+```
 
 ### Skill 没有出现
 

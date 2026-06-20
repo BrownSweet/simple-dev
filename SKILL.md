@@ -2,10 +2,13 @@
 name: simple-dev
 description: Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance. Use across planning, implementation, refactoring, and code review. Follow existing project conventions; do not replace dedicated TDD, architecture design, performance diagnosis, security review, or migration workflows.
 license: Apache-2.0
-compatibility: OpenAI Codex, Claude Code, Agent Skills compatible clients, and VS Code/GitHub Copilot; no runtime dependencies.
+compatibility: OpenAI Codex, Claude Code (verified 2.1.0+), Agent Skills compatible clients, and VS Code/GitHub Copilot; no runtime dependencies.
 metadata:
   author: simple-dev maintainers
-  version: "1.0.0"
+  version: "1.0.1"
+  claude_code_supported: true
+  claude_code_min_version: "2.1.0"
+  last_tested: "2026-06-20"
 ---
 
 # Simple Dev

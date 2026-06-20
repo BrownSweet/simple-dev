@@ -1,0 +1,29 @@
+interface:
+  display_name: "Simple Dev"
+  short_description: "Minimal, verified changes without over-abstraction"
+  default_prompt: "Use /simple-dev for the smallest correct change: follow project patterns, verify before and after, and check N+1 risks."
+
+policy:
+  allow_implicit_invocation: true
+  allow_explicit_invocation: true
+
+platform_specific:
+  claude_code:
+    supported: true
+    version_min: "2.1.0"
+    activation_mode: "both"
+    slash_command: true
+    context_available:
+      - workspace_files
+      - git_status
+      - build_output
+
+skill_metadata:
+  skill_type: "development_constraint"
+  domains:
+    - planning
+    - implementation
+    - refactoring
+    - code_review
+  complexity: "low"
+  interactivity: "high"

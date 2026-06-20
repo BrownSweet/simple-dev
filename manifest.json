@@ -1,11 +1,11 @@
 {
   "name": "simple-dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "owner": "simple-dev maintainers",
   "license": "Apache-2.0",
   "updated_at": "2026-06-20",
-  "status": "experimental",
-  "release_channel": "beta",
+  "status": "stable",
+  "release_channel": "stable",
   "maturity_tier": "library",
   "lifecycle_stage": "library",
   "context_budget_tier": "scaffold",
@@ -14,10 +14,20 @@
   "target_platforms": [
     "openai",
     "claude",
+    "claude-code",
     "generic",
     "agent-skills-compatible",
     "vscode"
   ],
+  "platform_support": {
+    "claude-code": {
+      "supported": true,
+      "min_version": "2.1.0",
+      "installation_path": "~/.claude/skills/simple-dev",
+      "invocation_style": "slash-command",
+      "verified_date": "2026-06-20"
+    }
+  },
   "factory_components": [
     "evals",
     "reports"
