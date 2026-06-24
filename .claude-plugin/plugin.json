@@ -1,0 +1,26 @@
+{
+  "name": "simple-dev",
+  "version": "1.0.1",
+  "displayName": "Simple Dev",
+  "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work, fewer abstractions, files, or jumps, flatter control flow, lightweight test-first changes, or N+1 avoidance.",
+  "author": "simple-dev maintainers",
+  "license": "Apache-2.0",
+  "type": "skill",
+  "entryPoint": "../SKILL.md",
+  "keywords": [
+    "development",
+    "constraints",
+    "minimal",
+    "simple",
+    "refactoring",
+    "review"
+  ],
+  "skills": {
+    "simple-dev": {
+      "name": "simple-dev",
+      "displayName": "Simple Dev",
+      "description": "Apply simple development constraints when the user explicitly asks for minimal or straightforward work.",
+      "markdown": "../SKILL.md"
+    }
+  }
+}
